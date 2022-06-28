@@ -1,4 +1,6 @@
 include .env
+include .private.env
+include private.docker.mk
 
 default: up
 
@@ -87,3 +89,7 @@ logs:
 # https://stackoverflow.com/a/6273809/1826109
 %:
 	@:
+
+.PHONY: install
+install:
+	docker exec $(shell docker ps --filter name='^/$(PROJECT_NAME)_php' --format "{{ .ID }}") drush -r $(DRUPAL_ROOT) $(filter-out $@,$(MAKECMDGOALS)) $(DRUPAL_PROFILE_INSTALATION) si --db-url=mysql://$(DB_USER):$(DB_PASSWORD)@$(DB_HOST)/$(DB_NAME) -y

@@ -1,3 +1,8 @@
 .idea/
 mutagen.yml.lock
 .vscode
+ssh/
+private.docker.mk
+.private.env
+tmp/
+repositories/

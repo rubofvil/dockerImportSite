@@ -4,7 +4,7 @@
 
 ## Introduction
 
-Docker4Drupal is a set of docker images optimized for Drupal. Use `docker-compose.yml` file from the [latest stable release](https://github.com/wodby/docker4drupal/releases) to spin up local environment on Linux, Mac OS X and Windows. 
+Docker4Drupal is a set of docker images optimized for Drupal. Use `docker-compose.yml` file from the [latest stable release](https://github.com/wodby/docker4drupal/releases) to spin up local environment on Linux, Mac OS X and Windows.
 
 * Read the docs on [**how to use**](https://wodby.com/docs/stacks/drupal/local#usage)
 * Ask questions on [Slack](http://slack.wodby.com/)
@@ -43,7 +43,7 @@ The Drupal stack consist of the following containers:
 | phpMyAdmin      | latest             | [phpmyadmin/phpmyadmin]            |               |                    |
 | Selenium chrome | 3.141              | [selenium/standalone-chrome]       |               |                    |
 | Traefik         | latest             | [_/traefik]                        | ✓             | ✓                  |
- 
+
 Supported Drupal versions: 9 / 8 / 7
 
 ## Documentation
@@ -54,7 +54,7 @@ Full documentation is available at https://wodby.com/docs/stacks/drupal/local.
 
 Images tags format is `[VERSION]-[STABILITY_TAG]` where:
 
-`[VERSION]` is the _version of an application_ (without patch version) running in a container, e.g. `wodby/nginx:1.15-x.x.x` where Nginx version is `1.15` and `x.x.x` is a stability tag. For some images we include both major and minor version like PHP `7.2`, for others we include only major like Redis `5`. 
+`[VERSION]` is the _version of an application_ (without patch version) running in a container, e.g. `wodby/nginx:1.15-x.x.x` where Nginx version is `1.15` and `x.x.x` is a stability tag. For some images we include both major and minor version like PHP `7.2`, for others we include only major like Redis `5`.
 
 `[STABILITY_TAG]` is the _version of an image_ that corresponds to a git tag of the image repository, e.g. `wodby/mariadb:10.2-3.3.8` has MariaDB `10.2` and stability tag [`3.3.8`](https://github.com/wodby/mariadb/releases/tag/3.3.8). New stability tags include patch updates for applications and image's fixes/improvements (new env vars, orchestration actions fixes, etc). Stability tag changes described in the corresponding a git tag description. Stability tags follow [semantic versioning](https://semver.org/).
 
@@ -66,7 +66,8 @@ We regularly update images used in this stack and release them together, see [re
 
 ## Beyond local environment
 
-Docker4Drupal is a project designed to help you spin up local environment with docker-compose. If you want to deploy a consistent stack with orchestrations to your own server, check out [Drupal stack](https://wodby.com/stacks/drupal) on Wodby ![](https://www.google.com/s2/favicons?domain=wodby.com).
+Docker4Drupal is a project designed to help you spin up local environment with docker-compose. If you want to deploy a consistent stack with orchestrations to your own server, check out.
+[Drupal stack](https://wodby.com/stacks/drupal) on Wodby ![icon](https://www.google.com/s2/favicons?domain=wodby.com).
 
 ## Other Docker4x projects
 
@@ -127,3 +128,9 @@ This project is licensed under the MIT open source license.
 [wodby/webgrind]: https://hub.docker.com/r/wodby/webgrind
 [wodby/xhprof]: https://hub.docker.com/r/wodby/xhprof
 [zookeeper]: https://hub.docker.com/_/zookeeper
+
+## Required Extra for **use**
+
+* Add files:
+  * `private.docker.mk`
+  * `.private.env`
